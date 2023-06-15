@@ -48,6 +48,7 @@ h2::before{
 }
 .text{
     text-indent: 5%;
+    line-height: 140%;
 }
 section{
     padding-bottom: 1%;
