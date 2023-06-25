@@ -1,33 +1,74 @@
 :root{
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
 }
 body{
-    margin: 0 auto;
-    padding: 0 2%;
     color: #444;
-    overflow-x: hidden;
+    background: url(img/BG.jpg);
+   
+    margin: 0;
 }
 .container{
     max-width: 1440px;
     width: 100%;
+    box-sizing: border-box;
     margin: 0 auto;
+    padding: 0 5%;
+    background-color: rgba(233, 253, 233, 0.5);
+    overflow-x: auto;
 }
+.imgs, .text_img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 1440px;
+    width: 100%;
+    gap: 2%;
+}
+.img{
+    max-width: 47vw;
+    min-width: 15vw;
+    height: auto;
+    width: 90%;
+
+}
+.video{
+    max-width: 49%;
+    width: 100%;
+}
+/*.text_img{
+    gap: 10%;
+}*/
+
+.text_img>.text{
+    width: 70%;
+    text-align: justify;
+    padding: 0%;
+}
+.text_img>.img{
+    width: 30%;
+}
+
+
 h1,h2{
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poiret One', cursive;
+    font-weight: 900;
     color: #111;
 }
 
 h1{
     text-align: center;
     padding-bottom: 1%;
+    margin: 0;
+    padding: 4vh 0 2vh 0;
 }
 a{
     /*text-decoration: none;*/
     color: black;
 }
 a:hover{
-    text-transform:lowercase;
+    font-weight: 600;
 }
 
 ul{
@@ -52,4 +93,39 @@ h2::before{
 }
 section{
     padding-bottom: 1%;
+}
+strong{
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+@media screen and (max-width: 834px) {
+    .container{
+        text-align: justify;
+    }
+    .imgs, .text_img{
+        flex-direction: column;
+        gap: 2vh;
+    }
+    .img,.text_img>.text {
+        width: 100%;
+        max-width: 100vw;
+        order: 2;
+        padding: 0;
+    }
+    .text_img>.img  {
+        width: 50%;
+        order: 1;
+    }
+    .video{
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 1441px) {
+    :root{
+        font-size: 20px;
+    }
+    .text_img>.img{
+        width: 30%;
+    }
 }
